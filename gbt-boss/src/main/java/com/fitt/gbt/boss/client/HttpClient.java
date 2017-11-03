@@ -1,8 +1,7 @@
-package com.fitt.gbt.gbtboss.client;
+package com.fitt.gbt.boss.client;
 
-import com.fitt.gbt.gbtboss.handler.HttpClientInBoundHandler;
+import com.fitt.gbt.boss.handler.HttpClientInBoundHandler;
 import io.netty.bootstrap.Bootstrap;
-import io.netty.buffer.Unpooled;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelInitializer;
 import io.netty.channel.ChannelOption;
@@ -10,15 +9,12 @@ import io.netty.channel.EventLoopGroup;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioSocketChannel;
-import io.netty.handler.codec.http.DefaultFullHttpRequest;
-import io.netty.handler.codec.http.HttpHeaders;
-import io.netty.handler.codec.http.HttpMethod;
 import io.netty.handler.codec.http.HttpRequestDecoder;
 import io.netty.handler.codec.http.HttpResponseEncoder;
-import io.netty.handler.codec.http.HttpVersion;
+import io.netty.handler.codec.string.StringDecoder;
+import io.netty.handler.codec.string.StringEncoder;
 
 import java.io.UnsupportedEncodingException;
-import java.net.URI;
 import java.net.URISyntaxException;
 
 /**
@@ -36,12 +32,12 @@ public class HttpClient {
 			Bootstrap bootstrap = new Bootstrap();
 			bootstrap.group(workerGroup);
 			bootstrap.channel(NioSocketChannel.class);
-			bootstrap.option(ChannelOption.SO_KEEPALIVE, true);
+			bootstrap.option(ChannelOption.TCP_NODELAY, true);
 			bootstrap.handler(new ChannelInitializer<SocketChannel>() {
 				@Override
 				protected void initChannel(SocketChannel channel) throws Exception {
-					channel.pipeline().addLast(new HttpRequestDecoder());
-					channel.pipeline().addLast(new HttpResponseEncoder());
+					channel.pipeline().addLast("decoder", new StringDecoder());
+					channel.pipeline().addLast("encoder", new StringEncoder());
 					channel.pipeline().addLast(new HttpClientInBoundHandler());
 				}
 			});
@@ -49,20 +45,8 @@ public class HttpClient {
 			// start the client
 			ChannelFuture future = bootstrap.connect(host, port).sync();
 
-			URI uri = new URI("http://127.0.0.1:9908");
-			String msg = "Are you Ok?";
-			DefaultFullHttpRequest request = new DefaultFullHttpRequest(
-					HttpVersion.HTTP_1_1,
-					HttpMethod.GET, uri.toASCIIString(),
-					Unpooled.wrappedBuffer(msg.getBytes("UTF-8")));
-			// create http request
-			request.headers().set(HttpHeaders.Names.HOST, host);
-			request.headers().set(HttpHeaders.Names.CONNECTION, HttpHeaders.Values.KEEP_ALIVE);
-			request.headers().set(HttpHeaders.Names.CONTENT_LENGTH, request.content().readableBytes());
-
 			// send http request
-			future.channel().write(request);
-			future.channel().flush();
+			future.channel().writeAndFlush("Hello Netty Server ,I am a common client");
 			future.channel().closeFuture().sync();
 		} finally {
 			workerGroup.shutdownGracefully();

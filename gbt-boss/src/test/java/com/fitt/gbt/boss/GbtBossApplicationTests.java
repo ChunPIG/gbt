@@ -1,4 +1,4 @@
-package com.fitt.gbt.gbtboss;
+package com.fitt.gbt.boss;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
