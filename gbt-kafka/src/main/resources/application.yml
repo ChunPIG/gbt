@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: gbt-kafka
+# Kafka Config
+  kafka:
+     bootstrap-servers: 112.74.62.23:9093
+     consumer:
+     #指定默认消费者group id
+       group-id: airag-repo-test
+#       key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+#       value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+       auto-offset-reset: earliest
+#     template:
+#     # 指定默认topic id
+#       default-topic: airag-repo-test
+#     listener:
+#     #指定listener 容器中的线程数，用于提高并发量
+#       concurrency: 3
+#     producer:
+#     #每次批量发送消息的数量
+#       batch-size: 1000
+#       key-serializer: org.apache.kafka.common.serialization.StringSerializer
+#       value-serializer: org.apache.kafka.common.serialization.StringSerializer
+logging:
+  level: debug

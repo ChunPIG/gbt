@@ -22,5 +22,3 @@ nbbuild/
 dist/
 nbdist/
 .nb-gradle/
-/gbt-kafka/pom.xml
-/gbt-kafka/pom.xml
