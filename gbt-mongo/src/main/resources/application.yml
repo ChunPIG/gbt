@@ -1,0 +1,12 @@
+server:
+  port: 7070
+spring:
+  data:
+    mongodb:
+      host: 192.168.20.155
+      port: 28004
+      database: airag
+      username: airag
+      password: channel
+logging:
+  level: debug

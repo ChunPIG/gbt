@@ -20,7 +20,7 @@
         <module>gbt-common</module>
         <module>gbt-oauth2</module>
         <module>gbt-shiro</module>
-        <module>gbt-mongo</module>
+        <!--<module>gbt-mongo</module>-->
         <module>gbt-redis</module>
         <module>gbt-model</module>
         <module>gbt-dao</module>

@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository;
 /**
  * <p>@Description: 用户持久化接口</p>
  * <p>@Copyright: Copyright(C) 2017 by AIRAG</p>
- * <p>@Author: Chuck[ZhengCongChun]</p>
+ * <p>@Author: Miles[ZhengCongChun]</p>
  * <p>@Created: 2017-07-17</p>
  * <p>@version: 1.0</p>
  */

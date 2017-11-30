@@ -1,0 +1,9 @@
+server.port=7070
+#spring.application.name=/gbt-mongo
+spring.data.mongodb.host=192.168.20.155
+spring.data.mongodb.port=28004
+spring.data.mongodb.database=airag
+spring.data.mongodb.username=airag
+spring.data.mongodb.password=channel
+logging.level.org.springframework.data=debug
+logging.level.=info

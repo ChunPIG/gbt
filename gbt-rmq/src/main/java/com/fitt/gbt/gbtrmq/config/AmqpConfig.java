@@ -21,7 +21,7 @@ import org.springframework.context.annotation.Scope;
  * <p>@description: 消息队列配置类</p>
  * http://docs.spring.io/spring-amqp/docs/1.4.5.RELEASE/reference/html/
  * <p>@copyright: Copyright(C) 2017 by AIRAG</p>
- * <p>@author: Chuck[ZhengCongChun]</p>
+ * <p>@author: Miles[ZhengCongChun]</p>
  * <p>@created: 2017-10-31</p>
  * <p>@version: 1.0</p>
  */

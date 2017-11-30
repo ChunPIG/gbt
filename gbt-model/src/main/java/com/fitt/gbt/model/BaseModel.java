@@ -8,7 +8,7 @@ import java.util.Date;
 /**
  * <p>@Description: 基础模型对象</p>
  * <p>@Copyright: Copyright(C) 2017 by AIRAG</p>
- * <p>@Author: Chuck[ZhengCongChun]</p>
+ * <p>@Author: Miles[ZhengCongChun]</p>
  * <p>@Created: 2017-07-17</p>
  * <p>@version: 1.0</p>
  */

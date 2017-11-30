@@ -13,7 +13,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 /**
  * <p>@description: TCP Socket连接全局缓存</p>
  * <p>@copyright: Copyright(C) 2017 by AIRAG</p>
- * <p>@author: Chuck[ZhengCongChun]</p>
+ * <p>@author: Miles[ZhengCongChun]</p>
  * <p>@created: 2017-11-02</p>
  * <p>@version: 1.0</p>
  */

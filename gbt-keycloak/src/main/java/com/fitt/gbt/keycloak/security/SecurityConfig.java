@@ -20,7 +20,7 @@
 ///**
 // * <p>@description: ebSecurityConfigurerAdapter扩展配置类</p>
 // * <p>@copyright: Copyright(C) 2017 by AIRAG</p>
-// * <p>@author: Chuck[ZhengCongChun]</p>
+// * <p>@author: Miles[ZhengCongChun]</p>
 // * <p>@created: 2017-11-16</p>
 // * <p>@version: 1.0</p>
 // */

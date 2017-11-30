@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
 /**
  * <p>@description: 用户消息生产者</p>
  * <p>@copyright: Copyright(C) 2017 by AIRAG</p>
- * <p>@author: Chuck[ZhengCongChun]</p>
+ * <p>@author: Miles[ZhengCongChun]</p>
  * <p>@created: 2017-10-30</p>
  * <p>@version: 1.0</p>
  */

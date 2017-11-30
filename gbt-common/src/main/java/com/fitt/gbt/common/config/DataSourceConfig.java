@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 /**
  * <p>@Description: 数据库配置信息</p>
  * <p>@Copyright: Copyright(C) 2017 by AIRAG</p>
- * <p>@Author: Chuck[ZhengCongChun]</p>
+ * <p>@Author: Miles[ZhengCongChun]</p>
  * <p>@Created: 2017-07-18</p>
  * <p>@version: 1.0</p>
  */

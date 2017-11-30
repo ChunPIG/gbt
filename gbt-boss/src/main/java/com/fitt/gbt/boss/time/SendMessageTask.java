@@ -23,7 +23,7 @@ import static io.netty.handler.codec.http.HttpVersion.HTTP_1_1;
 /**
  * <p>@description: com.fitt.gbt.boss.time</p>
  * <p>@copyright: Copyright(C) 2017 by AIRAG</p>
- * <p>@author: Chuck[ZhengCongChun]</p>
+ * <p>@author: Miles[ZhengCongChun]</p>
  * <p>@created: 2017-11-02</p>
  * <p>@version: 1.0</p>
  */
